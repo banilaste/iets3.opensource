@@ -13,7 +13,7 @@
     <import index="pbu6" ref="r:83e946de-2a7f-4a4c-b3c9-4f671aa7f2db(org.iets3.core.expr.base.behavior)" />
     <import index="exr9" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.nodeEditor(MPS.Editor/)" />
     <import index="xfg9" ref="r:ac28053f-2041-47f6-806b-ecfaca05a64a(org.iets3.core.expr.base.runtime.runtime)" />
-    <import index="1qv1" ref="r:c53b8bbc-6142-4787-a6e4-66310b772b37(org.iets3.core.expr.math.structure)" implicit="true" />
+    <import index="1qv1" ref="r:c53b8bbc-6142-4787-a6e4-66310b772b37(org.iets3.core.expr.math.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="itrz" ref="r:80fb0853-eb3b-4e84-aebd-cc7fdb011d97(org.iets3.core.base.editor)" implicit="true" />
     <import index="boxz" ref="r:89e950b9-8c66-4fca-a5c0-614e0548d83a(org.iets3.core.expr.math.behavior)" implicit="true" />
@@ -229,6 +229,10 @@
       <concept id="8658283006837849469" name="de.itemis.mps.editor.math.notations.structure.PowerEditor" flags="ng" index="jtDJS">
         <child id="8658283006839229766" name="superscript" index="jn6J3" />
         <child id="8658283006839229761" name="nomal" index="jn6J4" />
+      </concept>
+      <concept id="8658283006837848819" name="de.itemis.mps.editor.math.notations.structure.NRootEditor" flags="ng" index="jtDLQ">
+        <child id="8658283006838152439" name="n" index="jiZDM" />
+        <child id="8658283006838152444" name="body" index="jiZDT" />
       </concept>
       <concept id="8658283006837848169" name="de.itemis.mps.editor.math.notations.structure.DivisionEditor" flags="ng" index="jtDVG">
         <child id="8658283006838052215" name="lower" index="jiBfM" />
@@ -963,6 +967,18 @@
       </node>
       <node concept="3F1sOY" id="4wFKMWZgPzK" role="2QEq0V">
         <ref role="1NtTu8" to="1qv1:3iWt5efOwZ2" resolve="upper" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="5EZY1tO4hK$">
+    <property role="3GE5qa" value="" />
+    <ref role="1XX52x" to="1qv1:5EZY1tO49Bj" resolve="NRootExpression" />
+    <node concept="jtDLQ" id="5EZY1tO4hP2" role="2wV5jI">
+      <node concept="3F1sOY" id="5EZY1tO4hP8" role="jiZDT">
+        <ref role="1NtTu8" to="1qv1:5EZY1tO4hKU" resolve="expression" />
+      </node>
+      <node concept="3F1sOY" id="15rF4sVO6Fl" role="jiZDM">
+        <ref role="1NtTu8" to="1qv1:15rF4sVO5zo" resolve="exponent" />
       </node>
     </node>
   </node>

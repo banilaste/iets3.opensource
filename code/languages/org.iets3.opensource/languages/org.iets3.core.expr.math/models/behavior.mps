@@ -4,6 +4,7 @@
   <languages>
     <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="-1" />
     <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -20,7 +21,6 @@
     <import index="7xqi" ref="r:d2ff18ef-a6af-4ccc-bbe9-c907db320eae(org.iets3.core.expr.math.plugin)" />
     <import index="3rlt" ref="b0f8641f-bd77-4421-8425-30d9088a82f7/java:org.apache.commons.math3.analysis.integration(org.apache.commons/)" />
     <import index="e1fw" ref="b0f8641f-bd77-4421-8425-30d9088a82f7/java:org.apache.commons.math3.analysis.polynomials(org.apache.commons/)" />
-    <import index="zl0b" ref="b0f8641f-bd77-4421-8425-30d9088a82f7/java:org.apache.commons.math3.analysis(org.apache.commons/)" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -1872,6 +1872,25 @@
     </node>
     <node concept="13hLZK" id="3iWt5eg_dvM" role="13h7CW">
       <node concept="3clFbS" id="3iWt5eg_dvN" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="15rF4sVNL3w">
+    <ref role="13h7C2" to="1qv1:15rF4sVNo2k" resolve="EExpression" />
+    <node concept="13hLZK" id="15rF4sVNL3x" role="13h7CW">
+      <node concept="3clFbS" id="15rF4sVNL3y" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="15rF4sVNL3F" role="13h7CS">
+      <property role="TrG5h" value="getStringValue" />
+      <ref role="13i0hy" to="pbu6:2q1ydqQjSPO" resolve="getStringValue" />
+      <node concept="3Tm1VV" id="15rF4sVNL3G" role="1B3o_S" />
+      <node concept="3clFbS" id="15rF4sVNL3J" role="3clF47">
+        <node concept="3clFbF" id="15rF4sVNL3Y" role="3cqZAp">
+          <node concept="Xl_RD" id="15rF4sVNL3X" role="3clFbG">
+            <property role="Xl_RC" value="e" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="15rF4sVNL3K" role="3clF45" />
     </node>
   </node>
 </model>

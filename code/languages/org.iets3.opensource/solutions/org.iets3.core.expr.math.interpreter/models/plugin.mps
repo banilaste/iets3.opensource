@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model ref="r:ab4665d9-6baf-4005-b8e4-87240839fe18(org.iets3.core.expr.math.interpreter.plugin)">
   <persistence version="9" />
+  <attribute name="doNotGenerate" value="false" />
   <languages>
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="-1" />
     <use id="47f075a6-558e-4640-a606-7ce0236c8023" name="com.mbeddr.mpsutil.interpreter" version="-1" />
@@ -15,7 +16,6 @@
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
     <import index="1qv1" ref="r:c53b8bbc-6142-4787-a6e4-66310b772b37(org.iets3.core.expr.math.structure)" />
     <import index="oq0c" ref="r:6c6155f0-4bbe-4af5-8c26-244d570e21e4(org.iets3.core.expr.base.plugin)" />
-    <import index="s2qo" ref="r:ab4665d9-6baf-4005-b8e4-87240839fe18(org.iets3.core.expr.math.interpreter.plugin)" />
     <import index="pbu6" ref="r:83e946de-2a7f-4a4c-b3c9-4f671aa7f2db(org.iets3.core.expr.base.behavior)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
@@ -41,7 +41,7 @@
       <concept id="8118189177080264853" name="jetbrains.mps.baseLanguage.structure.AlternativeType" flags="ig" index="nSUau">
         <child id="8118189177080264854" name="alternative" index="nSUat" />
       </concept>
-      <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
+      <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="nn" index="2tJIrI" />
       <concept id="1239714755177" name="jetbrains.mps.baseLanguage.structure.AbstractUnaryNumberOperation" flags="nn" index="2$Kvd9">
         <child id="1239714902950" name="expression" index="2$L3a6" />
       </concept>
@@ -208,7 +208,7 @@
         <child id="1144231399730" name="condition" index="1Dwp0S" />
         <child id="1144231408325" name="iteration" index="1Dwrff" />
       </concept>
-      <concept id="5351203823916750322" name="jetbrains.mps.baseLanguage.structure.TryUniversalStatement" flags="ng" index="3J1_TO">
+      <concept id="5351203823916750322" name="jetbrains.mps.baseLanguage.structure.TryUniversalStatement" flags="nn" index="3J1_TO">
         <child id="8276990574886367510" name="catchClause" index="1zxBo5" />
         <child id="8276990574886367508" name="body" index="1zxBo7" />
       </concept>
@@ -340,10 +340,10 @@
       </concept>
     </language>
     <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
-      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="nn" index="3oM_SD">
         <property id="155656958578482949" name="value" index="3oM_SC" />
       </concept>
-      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="nn" index="1PaTwC">
         <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
@@ -366,11 +366,11 @@
       </node>
     </node>
     <node concept="rvkaK" id="uGVYUiiVQX" role="qq9xK">
-      <node concept="3uibUv" id="5BKAaizDLJj" role="r5wI3">
-        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
-      </node>
       <node concept="rxStX" id="uGVYUiiVQY" role="rai9p">
         <ref role="rxSuV" to="5qo5:4rZeNQ6Oetc" resolve="RealType" />
+      </node>
+      <node concept="3uibUv" id="5BKAaizDLJj" role="r5wI3">
+        <ref role="3uigEE" to="xlxw:~BigDecimal" resolve="BigDecimal" />
       </node>
     </node>
     <node concept="rvkaK" id="uGVYUij9aQ" role="qq9xK">
@@ -3015,6 +3015,49 @@
         </node>
       </node>
     </node>
+    <node concept="qq9P1" id="15rF4sWdCuX" role="qq9xR">
+      <property role="2TnfIJ" value="true" />
+      <ref role="qq9wM" to="1qv1:5EZY1tO49Bj" resolve="NRootExpression" />
+      <node concept="3vetai" id="15rF4sWdLVo" role="3vQZUl">
+        <node concept="2YIFZM" id="15rF4sWdQ9C" role="3vdyny">
+          <ref role="37wK5l" to="xlxw:~BigDecimal.valueOf(double)" resolve="valueOf" />
+          <ref role="1Pybhc" to="xlxw:~BigDecimal" resolve="BigDecimal" />
+          <node concept="2YIFZM" id="15rF4sWdQm0" role="37wK5m">
+            <ref role="37wK5l" to="wyt6:~Math.pow(double,double)" resolve="pow" />
+            <ref role="1Pybhc" to="wyt6:~Math" resolve="Math" />
+            <node concept="2OqwBi" id="15rF4sWe1Hr" role="37wK5m">
+              <node concept="rqRoa" id="15rF4sWdQwY" role="2Oq$k0">
+                <ref role="rqRob" to="1qv1:5EZY1tO4hKU" resolve="expression" />
+              </node>
+              <node concept="liA8E" id="15rF4sWe8lH" role="2OqNvi">
+                <ref role="37wK5l" to="xlxw:~BigDecimal.doubleValue()" resolve="doubleValue" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="15rF4sWeamd" role="37wK5m">
+              <node concept="rqRoa" id="15rF4sWeame" role="2Oq$k0">
+                <ref role="rqRob" to="1qv1:15rF4sVO5zo" resolve="exponent" />
+              </node>
+              <node concept="liA8E" id="15rF4sWeamf" role="2OqNvi">
+                <ref role="37wK5l" to="xlxw:~BigDecimal.doubleValue()" resolve="doubleValue" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="qpFDx" id="15rF4sWdEJ1" role="3vbI0w">
+        <ref role="qpFD$" to="1qv1:5EZY1tO4hKU" resolve="expression" />
+        <node concept="rxStX" id="15rF4sWdGf_" role="rajlz">
+          <ref role="rxSuV" to="5qo5:4rZeNQ6Oetc" resolve="RealType" />
+        </node>
+      </node>
+      <node concept="qpFDx" id="15rF4sWdJpU" role="3vbI0w">
+        <ref role="qpFD$" to="1qv1:15rF4sVO5zo" resolve="exponent" />
+        <node concept="rxStX" id="15rF4sWdLn1" role="rajlz">
+          <ref role="rxSuV" to="5qo5:4rZeNQ6Oetc" resolve="RealType" />
+        </node>
+      </node>
+    </node>
+    <node concept="lHU7p" id="15rF4sVNVLG" role="qq9xR" />
   </node>
   <node concept="312cEu" id="6Ywz62j4zey">
     <property role="TrG5h" value="MathInterpreterHelper" />

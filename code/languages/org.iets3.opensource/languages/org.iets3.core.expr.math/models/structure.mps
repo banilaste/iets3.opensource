@@ -3,6 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources" version="-1" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
@@ -428,6 +429,33 @@
       <property role="IQ2ns" value="3800040087837872067" />
       <ref role="20lvS9" node="3C0hCYboTSS" resolve="PolynomialExpression" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="5EZY1tO49Bj">
+    <property role="EcuMT" value="6539217963580430803" />
+    <property role="TrG5h" value="NRootExpression" />
+    <property role="3GE5qa" value="" />
+    <property role="34LRSv" value="n-root" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyj" id="5EZY1tO4hKU" role="1TKVEi">
+      <property role="IQ2ns" value="6539217963580464186" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="expression" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="15rF4sVO5zo" role="1TKVEi">
+      <property role="IQ2ns" value="1250782743471610072" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="exponent" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="15rF4sVNo2k">
+    <property role="EcuMT" value="1250782743471423636" />
+    <property role="TrG5h" value="EExpression" />
+    <property role="34LRSv" value="e" />
+    <ref role="1TJDcQ" to="hm2y:7halHeUzscN" resolve="PrimitiveLiteral" />
   </node>
 </model>
 
